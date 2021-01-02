@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "5fef2d1cba506b254046fe83"
+  },
+  "age": 15,
+  "famille": "nadaaa",
+  "race": "sanfora",
+  "nourriture": "coco",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fef2d8aba506b254046fe85"
+  },
+  "age": 16,
+  "famille": "nada",
+  "race": "sanfora",
+  "nourriture": "coco",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fef5d84ba506b254046fe88"
+  },
+  "age": 15,
+  "famille": "nada",
+  "race": "sanfora",
+  "nourriture": "coco",
+  "__v": 0
+}]

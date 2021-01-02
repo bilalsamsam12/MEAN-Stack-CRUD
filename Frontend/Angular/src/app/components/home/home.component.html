@@ -1,0 +1,84 @@
+<div class="row" style="text-align: center;">
+  <div class="col">
+    <div class="card">
+      <div class="card-content white-text">
+        <div>
+          <table >
+            <tr >
+              <td>
+                <div>
+                  <form #SchtroumpfForm="ngForm" (ngSubmit)="onSubmit(SchtroumpfForm)">
+                    <input type="hidden" name="_id" [(ngModel)]="selectedSchtroumpf._id">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label>Age :
+                        </label>
+                        <input type="text" name="age" ngModel placeholder="age" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label>Aamille :</label>
+                        <input type="text" name="famille" ngModel placeholder="famille">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label>Race :</label>
+                        <input type="text" name="race" ngModel placeholder="race">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label>Nourriture :</label>
+                        <input type="text" name="nourriture" ngModel placeholder="nourriture">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <button class="b2 " type="button" (click)="resetForm(SchtroumpfForm)">Reset</button>
+                        <button class="b1" type="submit">submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </td>
+              <td style="margin-left: 50px;">
+                <div >
+                  <table class="tablee" >
+                    <thead>
+                      <tr class="tr">
+                        <th class="td">Age</th>
+                        <th class="td">Famille</th>
+                        <th class="td">Race</th>
+                        <th class="td">Nourriture </th>
+                        <th class="td">Operations</th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let emp of schtroumpf" class="tr">
+                      <td class="td">{{emp.age}}</td>
+                      <td class="td">{{emp.famille}}</td>
+                      <td class="td">{{emp.race}}</td>
+                      <td class="td">{{emp.nourriture}}</td>
+                      <td class="td">
+                        <a class="b3" style="margin: 20px;" routerLink="/update/{{emp._id}}">
+                          Edit
+                        </a>
+                        <a class="b4" (click)="onDelete(emp._id,SchtroumpfForm)">
+                          Delete
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
