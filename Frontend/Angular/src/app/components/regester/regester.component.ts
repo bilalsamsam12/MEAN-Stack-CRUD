@@ -29,7 +29,7 @@ export class RegesterComponent implements OnInit {
     });
   }
   postregester(emp: Login_regester) {
-    return this.http.post('http://localhost:3000/Admin/inscription', emp);
+    return this.http.post('http://localhost:3001/Admin/inscription', emp);
   }
 
 }

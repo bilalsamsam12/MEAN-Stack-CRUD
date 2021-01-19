@@ -3,11 +3,12 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <form #frmregester="ngForm" (ngSubmit)="onRegester(frmregester)">
-          <h2 style="text-align: center;">sing up</h2>
+        <form #frmregester="ngForm" (ngSubmit)="onRegester(frmregester)" style="text-align: center;">
+          <h2 style="text-align: center;">Inscrition</h2>
           <input type="text" required name="username" ngModel   placeholder="Username"/>
           <input type="password" name="password" placeholder="Password" ngModel required>
-          <input type="submit" value="sing up" id='submit'>
+          <input type="submit" value="S'inscrire" id='submit'>
+          <a [routerLink]="'/'">connexion</a>
         </form>
       </div>
     </div>

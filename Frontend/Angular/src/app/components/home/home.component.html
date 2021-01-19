@@ -1,10 +1,10 @@
-<div class="row" style="text-align: center;">
+<div class="div" style=" background-color: rgb(102, 185, 211)">
   <div class="col">
     <div class="card">
       <div class="card-content white-text">
         <div>
-          <table >
-            <tr >
+          <table>
+            <tr>
               <td>
                 <div>
                   <form #SchtroumpfForm="ngForm" (ngSubmit)="onSubmit(SchtroumpfForm)">
@@ -44,8 +44,8 @@
                 </div>
               </td>
               <td style="margin-left: 50px;">
-                <div >
-                  <table class="tablee" >
+                <div>
+                  <table class="tablee" style="background-color: white;text-align: center;">
                     <thead>
                       <tr class="tr">
                         <th class="td">Age</th>
@@ -71,6 +71,14 @@
                     </tr>
                   </table>
                 </div>
+              </td>
+              <td>
+                <a class="b5" (click)="logout()">
+                  logout
+                </a>
+              </td>
+              <td>
+                <img src="../../assets/img/sanfour.jpg" alt="sanfour">
               </td>
             </tr>
           </table>

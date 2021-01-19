@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
   
   postauth(emp:any) {
-    return this.http.post('http://localhost:3000/Admin/auth', emp);
+    return this.http.post('http://localhost:3001/Admin/auth', emp);
   }
  
 

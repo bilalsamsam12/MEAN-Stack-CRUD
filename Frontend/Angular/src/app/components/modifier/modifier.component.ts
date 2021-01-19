@@ -37,7 +37,7 @@ export class ModifierComponent implements OnInit {
     });
   }
   GetonSchtroumpf(_id: string) {
-    return this.http.get(`http://localhost:3000/Schtroumpf/${_id}`);
+    return this.http.get(`http://localhost:3001/Schtroumpf/${_id}`);
   }
   onSubmit(form: NgForm) {
     if (form.value._id == "") {
@@ -57,10 +57,14 @@ export class ModifierComponent implements OnInit {
   
   
   postSchtroumpf(emp: Schtroumpf) {
-    return this.http.post('http://localhost:3000/Schtroumpf/add', emp);
+    return this.http.post('http://localhost:3001/Schtroumpf/add', emp);
   }
   putSchtroumpf(emp: Schtroumpf) { 
-    return this.http.put(`http://localhost:3000/Schtroumpf/${emp._id}`, emp);
+    return this.http.put(`http://localhost:3001/Schtroumpf/${emp._id}`, emp);
+  }
+  logout() {
+    this.router.navigate(['/']);
+
   }
 
 }

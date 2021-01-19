@@ -4,7 +4,7 @@ var ObjectId = require('mongoose').Types.ObjectId;
 
 var { Schtroumpf } = require('../models/Schtroumpf');
 
-// => localhost:3000/Schtroumpfs/
+// => localhost:3001/Schtroumpfs/
 router.get('/', (req, res) => {
     Schtroumpf.find((err, docs) => {
         if (!err) { res.send(docs); }

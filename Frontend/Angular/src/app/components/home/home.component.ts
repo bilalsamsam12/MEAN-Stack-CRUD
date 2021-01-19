@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import {Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Schtroumpf } from 'src/app/models/Schtroumpf.model';
 
 @Component({
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   selectedSchtroumpf: Schtroumpf;
   schtroumpf: Schtroumpf[];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
      this.selectedSchtroumpf = {
       _id: "",
       age: 0,
@@ -80,22 +81,26 @@ export class HomeComponent implements OnInit {
 
 
   postSchtroumpf(emp: Schtroumpf) {
-    return this.http.post('http://localhost:3000/Schtroumpf/add', emp);
+    return this.http.post('http://localhost:3001/Schtroumpf/add', emp);
   }
 
   getSchtroumpfList() {
-    return this.http.get('http://localhost:3000/Schtroumpf');
+    return this.http.get('http://localhost:3001/Schtroumpf');
   }
 
   putSchtroumpf(emp: Schtroumpf) { 
-    return this.http.put(`http://localhost:3000/Schtroumpf/${emp._id}`, emp);
+    return this.http.put(`http://localhost:3001/Schtroumpf/${emp._id}`, emp);
   }
 
   deleteSchtroumpf(_id: string) {
-    return this.http.delete(`http://localhost:3000/Schtroumpf/${_id}`);
+    return this.http.delete(`http://localhost:3001/Schtroumpf/${_id}`);
   }
   getonSchtroumpf(_id: string) {
-    return this.http.get(`http://localhost:3000/Schtroumpf/${_id}`);
+    return this.http.get(`http://localhost:3001/Schtroumpf/${_id}`);
+
+  }
+  logout() {
+    this.router.navigate(['/']);
 
   }
 }
